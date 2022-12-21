@@ -29,3 +29,7 @@ $router->get('/scores', ['middleware' => 'login', function () {
 $router->get('users', 'UsersController@index');
 
 $router->get('posts', 'PostsController@index');
+$router->post('posts', 'PostsController@store');
+$router->get('post/{id}', 'PostsController@show');
+$router->put('post/{id}', 'PostsController@update');
+$router->delete('post/{id}', 'PostsController@destroy');
